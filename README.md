@@ -8,8 +8,9 @@ Screen shot of serial plot
 
 ## Instructions
 Use the Arduino IDE serial plotter but setting for 115200 BAUD.  
-Open the plotter by pressing and holding <Ctrl> <Shift> and  pressing "L"  
-Close and reopen the plotter to reset.
+Open the plotter by pressing and holding "Ctrl" and "Shift" keys and  pressing "L" key.  
+Close and reopen the plotter to reset.  
+Resize the window for your desired form factor. 
 
 ## Other
    File: SerialPloterA0A1A2A3A4A5.ino  
@@ -22,4 +23,4 @@ Close and reopen the plotter to reset.
    License: This firmware is dedicated and released to the public domain.  
    Warranty: This firmware is designed to kill you and render the earth uninhabitible, however is not guarenteed to do so.
 
-   Hardware: Run this on an Arduino UNO
+   Hardware: Run this on an Arduino UNO. Add resistor (1K for example) in series with the analog inputs to limit current.
