@@ -3,15 +3,32 @@
 
 */
 
-#define MIN_VOLTAGE "-0.1"
-#define MAX_VOLTAGE "5.1"
+#define MIN_VOLTAGE "0"
+#define MAX_VOLTAGE "5"
 
 
 unsigned long lastADCtime = 0;
 unsigned long nextADCcapture = 100; //time in ms.
 
 
-
+void PrintPlotLegend() {
+  //Send first to set plot legend.
+  Serial.print("Min");
+  Serial.print(", ");
+  Serial.print("A0");
+  Serial.print(", ");
+  Serial.print("A1");
+  Serial.print(", ");
+  Serial.print("A2");
+  Serial.print(", ");
+  Serial.print("A3");
+  Serial.print(", ");
+  Serial.print("A4");
+  Serial.print(", ");
+  Serial.print("A5");
+  Serial.print(", ");
+  Serial.println("Max");
+}
 
 //Plot the A2Ds
 void PlotA2Ds() {
@@ -21,17 +38,18 @@ void PlotA2Ds() {
     //Time to capture and print
     Serial.print(F(MIN_VOLTAGE));
     Serial.print(", ");
-    Serial.print(analogRead(A0));
-    Serial.print(", ");  
-    Serial.print(analogRead(A1));
-    Serial.print(", ");  
-    Serial.print(analogRead(A2));
-    Serial.print(", ");  
-    Serial.print(analogRead(A3));
-    Serial.print(", ");  
-    Serial.print(analogRead(A4));
-    Serial.print(", ");  
-    Serial.print(analogRead(A5));
+    Serial.print(analogRead(A0)*5.0/1023);
+    Serial.print(", ");
+    Serial.print(analogRead(A1)*5.0/1023);
+    Serial.print(", ");
+    Serial.print(analogRead(A2)*5.0/1023);
+    Serial.print(", ");
+    Serial.print(analogRead(A3)*5.0/1023);
+    Serial.print(", ");
+    Serial.print(analogRead(A4)*5.0/1023);
+    Serial.print(", ");
+    Serial.print(analogRead(A5)*5.0/1023);
+    Serial.print(", ");
     Serial.println(F(MAX_VOLTAGE));
     lastADCtime = millis();
   }

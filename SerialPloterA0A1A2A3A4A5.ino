@@ -28,8 +28,12 @@ void setup() {
   //Other things at set up.
   Serial.begin(BAUDRATE);                   //Starts Serial Communication at Baud Rate 115200
   delay(500);
-  Serial.println(F(PROG_NAME));
-  Serial.println(F(VERSION));
+
+//Print program and version is incompatible with setting the plot legend  
+//  Serial.println(F(PROG_NAME));
+//  Serial.println(F(VERSION));
+
+  PrintPlotLegend();
 
   digitalWrite(LED_BUILTIN, LOW);   // turn the LED off at end of setup.
 }//end setup
@@ -37,6 +41,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   Wink();
+  PlotA2Ds();
 
 
 }//End loop
