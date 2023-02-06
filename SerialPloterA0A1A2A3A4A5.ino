@@ -3,7 +3,7 @@
    By: Forrest Lee Erickson
    Date: 20230206 Initial release.
    About: Using the serial ploter feature of the Arduino IDE make traces like a strip chart or
-   oscilliscope of the five analog inputs of an Arduino UNO.
+   oscilliscope of the six analog inputs of an Arduino UNO.
    Winks the BUILTIN LED to indicate activity.
 
    License: This firmware is dedicated and released to the public domain.
