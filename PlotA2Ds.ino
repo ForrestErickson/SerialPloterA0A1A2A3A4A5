@@ -6,9 +6,11 @@
 #define MIN_VOLTAGE "0"
 #define MAX_VOLTAGE "5"
 
+//This is the Sample period 
+const unsigned long SAMPLE_PERIOD = 100;  //Time in ms.
 
 unsigned long lastADCtime = 0;
-unsigned long nextADCcapture = 100; //time in ms.
+unsigned long nextADCcapture = SAMPLE_PERIOD; //time in ms.
 
 
 void PrintPlotLegend() {
@@ -51,6 +53,6 @@ void PlotA2Ds() {
     Serial.print(analogRead(A5)*5.0/1023);
     Serial.print(", ");
     Serial.println(F(MAX_VOLTAGE));
-    lastADCtime = millis();
+//    lastADCtime = millis();
   }
 }//end PlotA2Ds
