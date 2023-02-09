@@ -5,6 +5,7 @@ It is a good idea to add a series resistor (1K for example) to each Analog input
 
 Screen shot of serial plot
 ![SerialPloterA0A1A2A3A4A5_ScreenShot.png](SerialPloterA0A1A2A3A4A5_ScreenShot.png)  
+_Although the "Setup" is fictional in this screen shot the actual hardware was a 1K resistor from A4 to +5 and a jumper wire from D13 to A0. The peirodic low is the onboard LED winking._
 
 ## Instructions
 Use the Arduino IDE serial plotter but setting for 115200 BAUD.  
